@@ -43,11 +43,13 @@ namespace DataAccess.Concrete.EntityFramework
 
         public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
         {
-            using (NorthwindContext context=new NorthwindContext())
+            using (NorthwindContext context = new NorthwindContext())
             {
                 return filter == null ? context.Set<Product>().ToList() : context.Set<Product>().Where(filter).ToList();
 
             }
+
+
         }
 
         public void Update(Product entity)

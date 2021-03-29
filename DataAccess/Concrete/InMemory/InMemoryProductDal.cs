@@ -15,11 +15,11 @@ namespace DataAccess.Concrete.InMemory
         {
             _products = new List<Product> { 
                 
-                new Product{CategoryId=1,ProductId=1,ProductName="Bardak",UnitInStock=15,UnitPrice=15},
-                new Product{CategoryId=1,ProductId=2,ProductName="Kamera",UnitInStock=3,UnitPrice=500},
-                new Product{CategoryId=2,ProductId=3,ProductName="Telefon",UnitInStock=2,UnitPrice=1500},
-                new Product{CategoryId=2,ProductId=4,ProductName="Klavye",UnitInStock=65,UnitPrice=150},
-                new Product{CategoryId=2,ProductId=5,ProductName="Fare",UnitInStock=11,UnitPrice=85}
+                new Product{CategoryId=1,ProductId=1,ProductName="Bardak",UnitsInStock=15,UnitPrice=15},
+                new Product{CategoryId=1,ProductId=2,ProductName="Kamera",UnitsInStock=3,UnitPrice=500},
+                new Product{CategoryId=2,ProductId=3,ProductName="Telefon",UnitsInStock=2,UnitPrice=1500},
+                new Product{CategoryId=2,ProductId=4,ProductName="Klavye",UnitsInStock=65,UnitPrice=150},
+                new Product{CategoryId=2,ProductId=5,ProductName="Fare",UnitsInStock=11,UnitPrice=85}
 
             };
         }
@@ -72,7 +72,7 @@ namespace DataAccess.Concrete.InMemory
             productToUpdate.ProductName = product.ProductName;
             productToUpdate.CategoryId = product.CategoryId;
             productToUpdate.UnitPrice = product.UnitPrice;
-            productToUpdate.UnitInStock = product.UnitInStock; 
+            productToUpdate.UnitsInStock = product.UnitsInStock; 
         }
     }
 }
