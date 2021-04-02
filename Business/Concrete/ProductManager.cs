@@ -23,10 +23,10 @@ namespace Business.Concrete
         {
             //iş kodları
             //Yetkisi var mı?
-            if(DateTime.Now.Hour==14)
+            if (DateTime.Now.Hour == 10)
             {
                 return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
-            } 
+            }
             return new SuccessDataResult<List<Product>>( _productDal.GetAll(),Messages.ProductListed);
         }
 
